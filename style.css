@@ -1,0 +1,812 @@
+body, html {
+    height:auto;
+    margin:0;
+    background-color: #6B818C;
+    
+}
+/* ----dark-mode settings/styles */
+.dark-mode{
+    
+        background-color: #35605A;
+        color:white;
+    
+    .navbar2{
+        background-color: #00120B;
+
+    }
+    header nav #header a{
+        color:#6B818C;
+    }header nav #header a:hover{
+        color:rgb(255, 255, 255);
+    }
+    
+    /* #button_container button a{
+        color:#6B818C;
+    }
+    #button_container button a::after {
+        background-color:rgb(255, 255, 255);
+    }
+    #button_container button a:hover{
+        color:white;
+    } */
+  
+    input[type="text"],input[type="color"],input[type="date"],input[type="tel"],input[type="email"]{
+        background-color: #6B818C;
+        color:white;
+    }
+    input[type="text"]::placeholder,input[type="tel"]::placeholder,input[type="email"]::placeholder{
+       
+        color:white;
+        font-family: cursive;
+        font-size:14px;
+    }
+    #taskbtn {
+        
+        color: #00120B;
+       
+    }
+    #taskbtn2 {
+        
+        color: #00120B;
+       
+    }
+    footer{
+        background-color: #D8E4FF;
+    }
+    footer p{
+        color:black;
+        font-weight:bold;
+    }
+    tbody td{
+        background-color: #6B818C;
+    }
+    #table th{
+        background-color:#00120B;
+        color:#6B818C;
+    }
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* My logos hover */
+#header a:hover {
+    text-decoration: none;
+    color: rgb(238, 107, 31);
+    transition: 0.75s ease;
+    box-shadow: 0px 2px 0px 0px #ff6200;
+}
+/* my logos styling */
+#logo {
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+/* navbar styling */
+nav{
+    
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px 20px;
+    background-color: #b2b3b4;
+    z-index: 1000;
+}
+/* styling my main navbar buttons */
+nav a{
+    text-decoration: none;
+    color:black;
+    display:flex;
+}
+/* sidebar hovering style */
+.sidebar a:hover{
+    color: white;
+    background-color: gray;
+}
+/* navbar ul styling (buttons) */
+
+/* sidebar list styling */
+
+/* sidebar list link styling */
+.sidebar a{
+    width:100%;
+    height:100%;
+    padding:20px 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    color: black;
+}
+/* My side bar styling */
+.sidebar{
+    list-style: none;
+    position: fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:100%;
+    z-index: 999;
+    background-color: rgba(107, 110, 255, 0.341);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba( 0, 0 ,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+/* the animation of the icon of the sidebar (toggler) */
+#listbar{
+    
+    animation:sidebaranimation ease 2s;
+}
+svg#listybar{
+    margin-left:-150px;
+}
+/* the sidebar's list should be 100% wide */
+.sidebar li{
+    width:100%;
+    padding-bottom:20px;
+}
+.batn a{
+    text-decoration: none;
+    color:#3498db;
+}
+.batn{
+    margin-left:20px;
+    padding:15px 40px;
+    border:none;
+    outline:none;
+    color:#FFF;
+    cursor:pointer;
+    position:relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.batn::after{
+    content:"";
+    z-index: -1;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: #333;
+    left:0;
+    top:0;
+    border-radius:10px;
+    
+}
+.batn::before{
+    content:"";
+    background:linear-gradient(45deg, #FF0000, #FF7300, #FFFB00, 
+    #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    background-size:600%;
+    z-index: -1;
+    width:100%;
+    height:100%;
+    filter:blur(8px);
+    transition:opacity .3s ease-in-out;
+    border-radius:10px;
+    opacity:0;
+    animation:glowing 20s linear infinite;
+
+}
+.batn:hover::before{
+    opacity:1;
+}
+@keyframes glowing {
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}
+/* create a @ in which when the width exceeds 800px the items with class hideOnMobile will disappear */
+@media (max-width: 917px){
+    .batn{
+        display:none;
+    }
+}
+/* create a @ in which when the width exceeds 800px the items with class hideOnBigScreen will disappear */
+@media (min-width:917px){
+    .batn{
+        display:none;
+    }
+}
+
+/* an animation for the icon of the sidebar */
+@keyframes sidebaranimation{
+    from{
+        transform:translateY(-200px)
+    }
+    to{
+        transform:translateY(0px)
+    }
+}
+/* Styling my main buttons (menu) */
+/* .button_container  a{
+    margin-top: 8px;
+    color:#ff6200;
+    padding:10px;
+    border-radius: 0 20px;
+    right:0;
+    font-size: 20px;
+    font-family: sans-serif ;
+    letter-spacing: 5px;
+    display: flex; 
+    flex-direction: row; 
+    margin-left:20px;
+    display:flex;
+    
+} */
+
+
+ul.button_container{
+    display:flex;
+    margin-left:200px;
+    list-style: none;
+    justify-content:center;
+    
+}
+
+
+.mainmenu{
+    background-color: rgba(0, 0, 0, 0.585);
+    backdrop-filter: blur(10px);
+    padding:20px 20px;
+    margin-bottom:px;
+    display: flex;
+    justify-content: center;
+    position:sticky;
+    align-items: center;
+
+}
+
+.mainmenu.column{
+    flex-direction: column;
+}
+
+/* creating a margin so that there is enough space between my buttons */
+
+/* hovering effects for my main buttons */
+/* FIX THIS!!! */
+.btn_visit {    
+    box-shadow: 0px 2px darkblue;
+    transition: 0.75s ease;    
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed; 
+}
+#table tr th {
+    width: 75%;
+    background-color: #e8f9fd;
+    color: rgb(7, 1, 43);
+}
+input[type="color"] {
+    height: 20px;
+    width: 50px;
+    border-radius: 20px;
+    padding: 0 10px 0 10px;
+}
+input[type="text"]::placeholder{
+    color:black;
+    font-family: cursive;
+    font-size:14px;
+}
+input[type="tel"]::placeholder,input[type="email"]::placeholder{
+    color:black;
+    font-family: cursive;
+    font-size: 14px;
+}
+form button {
+    font-family: cursive;
+    border-style: none;
+    background: none;
+    position: relative; 
+    padding: 10px 20px;
+}
+
+/* form button a {
+    text-decoration: none;
+    color: red;
+    position: relative; 
+    display: inline-block; 
+} */
+ /* Table add and sort buttons */
+form .btn-group button {
+    position: relative;
+    color: #102946;
+    animation-name: taskbutton;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+form .btn-group button:hover{
+    color:white;
+    letter-spacing: .05em;
+    box-shadow:0 0 20px aqua,
+    0 0 30px darkblue;
+    background-color: #35605A;
+}
+form .btn-group .dropdown-toggle::after {
+    content: none; 
+}
+.dueto {
+    width: 200px;
+}
+.importance {
+    width: 150px;
+}
+.actions {
+    width: 150px;
+}
+
+table tr th {
+    font-size: 20px;
+}
+tbody td {
+    background-color: #c4d1d3;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+.tasks {
+    width: 300px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; /* ellipsis means that if there is not enough space for text it clips it */
+}
+tbody td:hover {
+    background-color: #1a5461;
+    color: white;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    display: none;
+}
+.table-container {
+    width: 100%;
+}
+table {
+    width: 100%;
+    table-layout: auto;
+    text-align: center;
+    max-width: 90%;
+}
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #b2b3b4;
+    padding: 20px;
+    font-family: cursive;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.icon-link {
+    margin-top: -20px;
+    color: black;
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+}
+footer img {
+    margin-top: auto;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+.main-content {
+    min-height: calc(100vh - 140px);
+}
+#navbar {
+    overflow: hidden;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    
+}
+.checkbutton {
+    font-size: 30px;
+    color: darkblue;
+    position: fixed;
+    float: right;
+    line-height: 40px;
+    margin-right: 40px;
+    display: none;
+}
+#check {
+    display: none;
+}
+#check:checked ~ #button_container{
+    height:100px;
+    
+    display:flex;
+    right:0;
+}
+
+#check:checked ~ #button_container {
+    flex-direction: column;
+    width:100%;
+    right:0;
+}
+#button_container button a{
+    color:black;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+#btntop {
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 0; 
+    background: none;
+    border: none; 
+    color:black;
+}
+#btntop::before{
+    cursor:default;
+    content:'Back to the top ->'
+}
+/* FIX THIS */
+/* #button_container  a::after {
+    content: '';
+    position: absolute;
+    background-color: #ff6200;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -1px;
+    transition: 0.75s ease;
+}
+#button_container  a:hover::after {
+    width: 100%;
+} */
+#backtop #btntop i:hover{
+    background: none;
+    font-size:30px;
+    transition: all .5s;
+    color:#ff6200;
+} 
+#btntop:hover::before{
+    
+    display:none;
+}
+#deletebtn{
+    background-color:#35605A;
+    border:none;
+    color:black;
+
+}
+#btntop span {
+    display: inline-block;
+    padding: 10px;
+}
+#deletebtn:hover{
+    background-color:#00120B;
+    border:none;
+    color:white;
+    transition:all .5s ease;
+    
+}
+#checkbtn1{
+    display:none;
+}
+@keyframes taskbutton{
+    from{
+        transform:translateX(-50px);
+    }
+    to{
+        transform:translateX(0px);
+    }
+}
+
+.navbar2 h1{
+    animation-name: headerandlogo;
+    animation-duration:1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+
+}
+
+    /* ------CAROUSEL------ */
+#carousel{
+    max-width: 50%;
+    position:flex;
+    text-align: center;
+    margin:auto;
+    animation:fade 2s ease;
+
+}
+@keyframes fade{
+    from{
+        transform:translateX(-500px)
+    }
+    to{
+        transform:translateX(0px)
+    }
+    
+}
+    /* ------About us------ */
+   /* ------Grid------- */
+.container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    /* margin-inline: 1.5rem;
+    padding-block: 5rem; */
+}
+.card__container{
+    display:grid;
+    row-gap: 3.5rem;
+    animation: fade2 2s ease;
+}
+@keyframes fade2{
+    from{
+        transform:translateX(+500px)
+    }
+    to{
+        transform:translateX(0px)
+    }
+}
+.card__article{
+    margin:10px;
+    position:relative;
+    overflow:hidden;
+
+}
+.card__img{
+    width:328px;
+    border-radius: 1.5rem;
+}
+.card__data{
+    width:280px;
+    background-color: rgb(255, 244, 244);
+    padding: 1.5rem 2rem;
+    box-shadow: 9 8px 24px hsla(0, 0%, .15);
+    border-radius: 1rem;
+    position:absolute;
+    bottom: -9rem;
+    right:0;
+    left:0;
+    margin-inline: auto;
+    opacity:0;
+    transition:opacity 1s 1s;
+}
+.card__description{
+    color:black;
+    display:block;
+    font-size: 15px;
+    margin-bottom:  .25rem;
+}
+.card__title{
+    font-size: 25px;
+    font-weight: 500;
+    color:black;
+    margin-bottom: .75rem;
+}
+.card__button{
+    text-decoration: none;
+    font-size: small;
+    font-weight: 500;
+    color:black;
+}
+.card__img {
+    width: 100%;
+    height: 500px; 
+    max-height: 500px; 
+    object-fit: cover; 
+}
+
+.card__button:hover{
+    text-decoration: underline;
+}
+.card__article:hover .card__data{
+    animation:show-data 1s forwards;
+    opacity:1;
+    transition:opacity .3s;
+}
+.card__article:hover{
+    animation: remove-overflow 2s forwards;
+}
+.card__article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+.card__article:not(:hover) .card__data{
+    animation: remove-data 1s forwards;
+}
+@keyframes show-data{
+    50%{
+        transform:translateY(-10rem)
+        }
+    100%{
+        transform: translateY(-7rem)
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform:translateY(-7rem);
+    }
+    50%{
+        transform:translateY(-10rem);
+    }
+    100%{
+        transform:translateY(.5em);
+    }
+}
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow:hidden;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .card__container{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1.5rem;
+    }
+}
+@media screen and (min-width: 1000px){
+    .card__container{
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+/* ------INFO------ */
+.info{
+    margin-top:200px;
+    margin-left: 200px;
+    animation:infop 3s ease;
+    animation-timeline:view();
+    animation-range:entry 50% cover 50%;
+}
+.info p{
+    font-size:20px;
+    font-family: cursive;
+    margin-top: 25px;
+    animation:infop 3s ease;
+    animation-timeline:view();
+    animation-range:entry 50% cover 50%;
+}
+@keyframes infop {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+    
+}
+.why{
+    margin-top:200px;
+    margin-left: 200px;
+    animation:infop 3s ease;
+    animation-timeline:view();
+    animation-range:entry 50% cover 50%;
+}
+.why p{
+    font-size:20px;
+    font-family: cursive;
+    margin-top: 25px;
+    animation:infop 3s ease;
+    animation-timeline:view();
+    animation-range:entry 50% cover 50%;
+}
+.productivity{
+    margin-top:200px;
+    margin-left: 200px;
+    animation:infop 3s ease;
+    animation-timeline:view();
+    animation-range:entry 50% cover 50%;
+}
+.productivity p{
+    font-size:20px;
+    font-family: cursive;
+    margin-top: 25px;
+    margin-bottom:150px;
+    animation:infop 3s ease;
+    animation-timeline:view();
+    animation-range:entry 50% cover 50%;
+    
+}
+            /* ------CONTACT US------ */
+.contact_container{
+    display:flex;
+    justify-content: center;
+    
+    margin-bottom: 200px;
+}
+.contactme1{
+    display: flex;
+    justify-content: center;
+    margin-top:200px;
+    margin-bottom: -100px;
+}
+main #img2{
+    max-width: 100%;
+    height:500px;
+    object-fit: cover;
+}
+form .submitbtn{
+    display: block;
+    text-decoration: none;
+    color: black;
+    position: sticky;
+    padding: 0 5px;
+}
+form .submitbtn:hover{
+    text-decoration: underline;
+    color:white;    
+    transition: .5s ease;
+    letter-spacing: 0.15rem;
+}
+.navbar-collapse .navbar-nav {
+    flex-direction: column;
+}
+
+.navbar-collapse .navbar-nav .nav-item {
+    margin-bottom: 10px;
+}
+
+/* Adjustments for smaller screens or minimized (resized) */
+@media (min-width: 768px) {
+    .toggle-menu {
+        display: none;
+    }
+
+    .batn {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 767px) {
+    .toggle-menu {
+        display: block;
+    }
+
+    .batn {
+        display: none;
+    }
+}
+#toggler1{
+    font-size:30px;
+    color:white;
+    display:flex;
+    padding:20px;
+}
+#toggler1:hover{
+    background-color:rgba(173, 216, 230, 0.345);
+    border-radius: 25px;
+    padding:20px;
+    transition:ease .5s;
+}
+

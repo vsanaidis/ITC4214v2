@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script defer src="myscript.js"></script>
+    <script defer src="checker.js"></script>
+    <title>Daylist</title>
+    <link rel="icon" href="logo.png">
+    <!-- Welcome to my code !  -->
+</head>
+<body>
+    <header>
+        <nav class="navbar2 navbar-expand-lg position-sticky top-0 end-0">
+            <h1 id="header"><a href="index.html"><img id="logo" src="logo.png">Daylist</a></h1>
+            <div class="mt-3 form-check form-switch">
+                <input class="ms-5 form-check-input" type="checkbox" role="switch" id="darkmodeswitch">
+                <label class="form-check-label ms-1" for="darkmodeswitch"><i id="moon" class="bi bi-moon"></i></label>
+            </div>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg id="detoggler" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_us.html">About us</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+                
+            </ul>
+        </nav>
+        <div class="mainmenu">
+            <button class="btn toggle-menu" onclick=showSidebar()><i id="toggler1" class="bi bi-list"></i></button>
+            <a href="index.html"><button class="batn hideOnBigScreen">Home</button></a>
+            <a href="About_us.html"><button class="batn hideOnBigScreen">About us</button></a>
+            <a href="contact_us.html"><button class="batn hideOnBigScreen">Contact us</button></a>
+        </div>
+    </header>
+    <main class="flex-grow-1 main-content">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="task1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="task2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="tasks.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>            
+          </div>
+    </main>
+    <div class="container">
+        <div class="card__container">
+            <article class="card__article">
+                <img src="image1.PNG" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Welcome!</span>
+                    <h2 class="card__title">This is me</h2>
+                    <a href="#aboutme" class="card__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="why.jpg" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Why?</span>
+                    <h2 class="card__title">What is the purpose of this site?</h2>
+                    <a href="#why" class="card__button">Read More</a>
+                </div>
+            </article>
+            
+            <article class="card__article">
+                <img src="stairs.jpg" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Productivity!</span>
+                    <h2 class="card__title">How does "Daylist" make me more productive?</h2>
+                    <a href="#productivity" class="card__button">Read More</a>
+                </div>
+            </article>
+            
+        </div>
+    </div>
+    <div class="info">
+        <h1 id="aboutme">Who am I?</h1>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Vasileios Sanaidis and I am on my third year of studying Cybersecurity and Networks at Deree college. This website was created as part of <br> my mid-term project for ITC4214 with Dr. Leonardos Mageiros. If you enjoy it feel free to contact me! </p>
+
+    </div>
+    
+    <div class="why">
+        <h1 id="why"> Purpose: </h1>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This website was created as part of my mid-term project for ITC4214 with Dr. Leonardos Mageiros. This website is here to assist you with organizing your <br> time and tasks. You can customize your tasks importance by choosing different colors to highlight them. Also, by shorting them by date you can easily see which tasks <br> are more urgent to be done! </p>
+    </div>
+
+    <div class="productivity">
+        <h1 id="productivity">Productivity:</h1>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How can "Daylist" make you more productive? The answer is simple;Just by using it! Let me rephrase that. There are a few steps to be more productive,<br> this website is not a magic place that when you visit suddenly you become an organizational wizzard! The first step is to sort and prioritize every task accordingly,<br> this of course will be done by sorting your tasks either by the due-date or by alphabetical order. The second step is to group the tasks with similar due-dates or <br> context, you can do that by choosing the same color of importance for those tasks that are similar. The third step is to add as much context as needed to your task,<br> this will help you remember more things about a certain task and will also help you when you need to remember important information. Last but not least, the fourth <br> step is to cross off your list the unnecessary or "done" tasks, you can do that by clicking on the tick icon on the right of each task! </p>
+    </div>
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 100vh;" id="backtop">
+        <button class="btn btn-primary" id="btntop"><span><i class="bi bi-arrow-up-square"></i></span>
+    </div>
+    <footer class="container-fluid text-center fst-italic" id="footer">
+        <img src="logo.png">
+        <p>© 2024 Vasileios Sanaidis. All rights reserved.</p>
+        <p>Social:</p>
+        <a class="icon-link" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a class="icon-link" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a class="icon-link" href="mailto: v.sanaidis@acg.edu" target="_blank"><i class="bi bi-envelope" id="mailto"></i></a>
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

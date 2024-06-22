@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script defer src="myscript.js"></script>
+    <script defer src="checker.js"></script>
+    <title>Daylist</title>
+     <link rel="icon" href="logo.png"> <!--I enter my logo-->
+    <!-- Welcome to my code !  -->
+</head>
+<body>
+    <header>
+        <nav class="navbar2 navbar-expand-lg position-sticky top-0 end-0">
+            <h1 id="header"><a href="index.html"><img id="logo" src="logo.png">Daylist</a></h1>
+            <div class="mt-3 form-check form-switch">
+                <input class="ms-5 form-check-input" type="checkbox" role="switch" id="darkmodeswitch">
+                <label class="form-check-label ms-1" for="darkmodeswitch"><i id="moon" class="bi bi-moon"></i></label>
+            </div>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg id="detoggler" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_us.html">About us</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+                
+            </ul>
+                </nav>
+                <div class="mainmenu">
+                    <button class="btn toggle-menu" onclick=showSidebar()><i id="toggler1" class="bi bi-list"></i></button>
+                    <a href="index.html"><button class="batn hideOnBigScreen">Home</button></a>
+                    <a href="About_us.html"><button class="batn hideOnBigScreen">About us</button></a>
+                    <a href="contact_us.html"><button class="batn hideOnBigScreen">Contact us</button></a>
+                </div>
+                
+        
+    </header>
+    <main class="flex-grow-1 main-content">
+        <form class="container-fluid text-center mt-3">
+            <input type="text" placeholder="enter your task here" class="form-control input-lg" >
+            <input type="date">
+            <input class="mt-3 pe-3 me-5" type="color" list="colorPreset">
+            <datalist id="colorPreset"><!--A "database" with predefined colors for the user to use in the important section-->
+                <option value="#FF0707"></option>
+                <option value="#073FFF"></option>
+                <option value="#00AD2A"></option>
+            </datalist>
+            <div class="btn-group container-fixed d-inline">
+                <button id="taskbtn" class="rounded-pill">Add task</button>
+                <button id="taskbtn2" type="button" class="dropdown-toggle rounded-pill" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" id="sortbydate" href="#">Date</a></li>
+                    <li><a class="dropdown-item" href="#" id="sortbyname">Name</a></li>
+                </ul>
+            </div>
+        </form>
+        <div class="table-container">
+            <table class="table table-bordered me-5 ms-5 mt-3 text-center" id="table">
+                <thead>
+                    <tr>
+                        <th class="tasks">Tasks</th>
+                        <th class="dueto">Due-to</th>
+                        <th class="importance pe-5">Importance</th>
+                        <th class="actions pe-5">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- table's rows will be created in this part of the code by my  script -->
+                </tbody>
+            </table>
+        </div>
+        <!--The icon that I use to go back to top-->
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 100vh;" id="backtop">
+            <button class="btn btn-primary" id="btntop"><span><i class="bi bi-arrow-up-square"></i></span>
+        </div>
+    </main>
+    
+    <footer class="container-fluid text-center fst-italic" id="footer">
+        <img src="logo.png">
+        <p>© 2024 Vasileios Sanaidis. All rights reserved.</p>
+        <p>Social:</p>
+        <a class="icon-link" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a class="icon-link" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a class="icon-link" href="mailto: v.sanaidis@acg.edu" target="_blank"><i class="bi bi-envelope" id="mailto"></i></a>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>
